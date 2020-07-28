@@ -4,6 +4,7 @@ ls
 
 export BUILD_TARGET_NAME=$1
 export SOURCE_ROOT=/github/workspace
-echo $SOURCE_ROOT
-cd ${BUILD_TARGET_NAME}.Android
-bash build.sh
+
+bash ${BUILD_TARGET_NAME}.Android/build.sh
+
+echo '::set-env name=UPLOAD_DIR::${BUILD_TARGET_NAME}.Android/libs'
