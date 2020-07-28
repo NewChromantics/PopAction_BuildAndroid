@@ -11,7 +11,7 @@ outputs:
     description: 'The time we greeted you'
 runs:
   using: 'docker'
-  image: 'simplatex/android-lightweight'
+  image: 'docker://simplatex/android-lightweight'
   args:
     - ${{ inputs.project }}
     - ${{ inputs.libdir }}
