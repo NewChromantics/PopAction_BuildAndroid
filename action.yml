@@ -6,9 +6,6 @@ inputs:
     required: true
   libdir:
     required: false
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
 runs:
   using: 'docker'
   image: 'docker://simplatex/android-lightweight'

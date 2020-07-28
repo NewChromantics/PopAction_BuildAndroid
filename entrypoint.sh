@@ -3,5 +3,5 @@
 ls
 
 export BUILD_TARGET_NAME=$1
-
-bash PopH264.Android/build.sh
+echo $BUILD_TARGET_NAME
+# bash PopH264.Android/build.sh
