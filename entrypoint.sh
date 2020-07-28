@@ -3,5 +3,7 @@
 ls
 
 export BUILD_TARGET_NAME=$1
-echo $BUILD_TARGET_NAME
-bash PopH264.Android/build.sh
+export SOURCEROOT=/github/workspace
+echo $SOURCEROOT
+cd ${BUILD_TARGET_NAME}.Android
+bash build.sh
