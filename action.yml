@@ -1,0 +1,17 @@
+# action.yml
+name: 'Build Android'
+description: 'A Github action to build the Pop Linux family'
+inputs:
+  project:  # project name
+    required: true
+  libdir:
+    required: false
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'simplatex/android-lightweight'
+  args:
+    - ${{ inputs.project }}
+    - ${{ inputs.libdir }}
