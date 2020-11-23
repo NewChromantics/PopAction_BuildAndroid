@@ -9,5 +9,5 @@ bash ${BUILD_TARGET_NAME}.Android/build.sh
 
 cp Source/${BUILD_TARGET_NAME}.h ${BUILD_TARGET_NAME}.Android/libs
 
-echo "::set-env name=UPLOAD_NAME::Android"
-echo "::set-env name=UPLOAD_DIR::${BUILD_TARGET_NAME}.Android/libs"
+echo "UPLOAD_NAME=Android" >> "$GITHUB_ENV"
+echo "UPLOAD_DIR=${BUILD_TARGET_NAME}.Android/libs" >> "$GITHUB_ENV"
