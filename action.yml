@@ -1,6 +1,6 @@
 # action.yml
 name: 'Build Android'
-description: 'A Github action to build the Pop Linux family'
+description: 'A Github action to build the Pop Android family'
 inputs:
   project:  # project name
     required: true
