@@ -4,12 +4,16 @@ ls
 
 # build script used to be ${BUILD_TARGET_NAME}.Android/build.sh
 # now specify directly
-export BUILD_SCRIPT_PATH=$1
+export BUILD_TARGET_NAME=$1
+export BUILD_SCRIPT_PATH=${BUILD_TARGET_NAME}.Android/build.sh
 export BUILD_PROJECT_PATH=$2
 # https://stackoverflow.com/a/9057392/355753
 # gr: this gives "bad substitution"
 #export ADDITIONAL_BUILD_ARGUMENTS="${@:3}"
 export ADDITIONAL_BUILD_ARGUMENTS=$3
+
+# env vars build.sh is expecting
+#BUILD_TARGET_NAME
 export SOURCE_ROOT=/github/workspace
 
 if [ ! -f "$BUILD_SCRIPT_PATH" ]; then
