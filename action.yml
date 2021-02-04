@@ -2,13 +2,16 @@
 name: 'Build Android'
 description: 'A Github action to build the Pop Android family'
 inputs:
-  project:  # project name
+  buildscript:
     required: true
-  libdir:
+  buildpath:
+    required: true
+  buildargs:
     required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.project }}
-    - ${{ inputs.libdir }}
+    - ${{ inputs.buildscript }}
+    - ${{ inputs.buildpath }}
+    - ${{ inputs.buildargs }}
