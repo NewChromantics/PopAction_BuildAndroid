@@ -30,7 +30,7 @@ fi
 bash ${BUILD_SCRIPT_PATH} ${BUILD_PROJECT_PATH} ${ADDITIONAL_BUILD_ARGUMENTS}
 # error if build fails
 RESULT=$?
-if [[ $RESULT -ne 0 ]]; then
+if [ $RESULT -ne 0 ]; then
     echo "Build script returned $RESULT, exiting"
 	exit $RESULT
 fi
