@@ -7,7 +7,9 @@ ls
 export BUILD_SCRIPT_PATH=$1
 export BUILD_PROJECT_PATH=$2
 # https://stackoverflow.com/a/9057392/355753
-export ADDITIONAL_BUILD_ARGUMENTS="${@:3}"
+# gr: this gives "bad substitution"
+#export ADDITIONAL_BUILD_ARGUMENTS="${@:3}"
+export ADDITIONAL_BUILD_ARGUMENTS=$3
 export SOURCE_ROOT=/github/workspace
 
 if [ ! -f "$BUILD_SCRIPT_PATH" ]; then
