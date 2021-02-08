@@ -1,5 +1,7 @@
 #!/bin/sh -l
 
+set -e
+
 ls
 
 # build script used to be ${BUILD_TARGET_NAME}.Android/build.sh
@@ -16,12 +18,12 @@ export ADDITIONAL_BUILD_ARGUMENTS=$3
 #BUILD_TARGET_NAME
 export SOURCE_ROOT=/github/workspace
 
-if [ ! -f "$BUILD_SCRIPT_PATH" ]; then
+if [ ! -f $BUILD_SCRIPT_PATH ]; then
     echo "Build Script path ($BUILD_SCRIPT_PATH arg1) file not found"
     exit 1
 fi
 
-if [ "$BUILD_PROJECT_PATH" == "" ]; then
+if [ $BUILD_PROJECT_PATH == "" ]; then
 	echo "Build project path ($BUILD_PROJECT_PATH argument 2) missing."
 	exit 2
 fi
