@@ -1,7 +1,13 @@
 #!/bin/bash -l
 
-set -eE
-trap 'printf "\e[31m%s: %s\e[m\n" "Script Error " $?' ERR
+set -Ee
+
+function notify {
+  echo "Something went wrong!"
+  echo "$(caller): ${BASH_COMMAND}"
+}
+
+trap notify ERR
 
 ls
 
