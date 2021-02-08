@@ -5,6 +5,8 @@ trap 'printf "\e[31m%s: %s\e[m\n" "Script Error " $?' ERR
 
 ls
 
+exit 1
+
 # build script used to be ${BUILD_TARGET_NAME}.Android/build.sh
 # now specify directly
 export BUILD_TARGET_NAME=$1
