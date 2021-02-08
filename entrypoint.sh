@@ -11,8 +11,6 @@ trap notify ERR
 
 ls
 
-exit 1
-
 # build script used to be ${BUILD_TARGET_NAME}.Android/build.sh
 # now specify directly
 export BUILD_TARGET_NAME=$1
@@ -32,7 +30,7 @@ if [ ! -f $BUILD_SCRIPT_PATH ]; then
     exit 1
 fi
 
-if [ $BUILD_PROJECT_PATH == "" ]; then
+if [ -z $BUILD_PROJECT_PATH ]; then
 	echo "Build project path ($BUILD_PROJECT_PATH argument 2) missing."
 	exit 2
 fi
