@@ -1,13 +1,7 @@
 #!/bin/sh -l
 
-set -e
-
-error() {
-  echo "Error in script"
-  exit 9
-}
-
-trap "error" ERR
+set -eE
+trap 'printf "\e[31m%s: %s\e[m\n" "Script Error " $?' ERR
 
 ls
 
