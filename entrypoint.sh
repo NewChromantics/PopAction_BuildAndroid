@@ -2,6 +2,13 @@
 
 set -e
 
+error() {
+  echo "Error in script"
+  exit 9
+}
+
+trap "error" ERR
+
 ls
 
 # build script used to be ${BUILD_TARGET_NAME}.Android/build.sh
