@@ -1,4 +1,4 @@
-#!/bin/sh -l
+#!/bin/bash -l
 
 set -eE
 trap 'printf "\e[31m%s: %s\e[m\n" "Script Error " $?' ERR
