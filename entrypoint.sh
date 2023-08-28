@@ -45,5 +45,5 @@ if [ $RESULT -ne 0 ]; then
 fi
 
 
-echo "UPLOAD_NAME=Android" >> "$GITHUB_ENV"
-echo "UPLOAD_DIR=${BUILD_PROJECT_PATH}/libs" >> "$GITHUB_ENV"
+echo "UPLOAD_NAME=Android" >> "$GITHUB_OUTPUT"
+echo "UPLOAD_DIR=${BUILD_PROJECT_PATH}/libs" >> "$GITHUB_OUTPUT"
